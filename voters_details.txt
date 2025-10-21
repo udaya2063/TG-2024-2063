@@ -1,0 +1,9 @@
+niuy,12345678,qwerty
+njku,123456789,asdfghj
+niu,1234567890,qwerty
+pasidu,2004,456
+pasidu,123456,89000
+udaya,12345678,u89
+pasidu,12345009,1234
+pasidu,12345,qwerty
+udaya,200408500933,abc123
