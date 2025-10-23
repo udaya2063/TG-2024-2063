@@ -208,10 +208,9 @@ int cantidate()
 
                     printf("Enter Strong password:\n");
                     scanf("%s", pass);
-                    printf("You are successfully registered!\n");
                     fprintf(fp2, "%s,%s,%s,%s\n", name, nic, num, pass);
                     fclose(fp2);
-
+                    printf("You are successfully registered!\n");
                     break;
 
                 default:
