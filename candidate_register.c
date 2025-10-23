@@ -17,7 +17,7 @@ int cantidate()
 
     printf("Enter You Age:\n");
     scanf("%d", &age);
-    if (age >= 25)
+    if (age >= 18)
     {
         printf("Are You Sri Lnaken ? (\033[1;33m y \033[0m/\033[1;34m n \033[0m):");
         scanf(" %c", &choice);
@@ -58,6 +58,7 @@ int cantidate()
                     if (strcmp(nic, cnic) == 0)
                     {
                         printf("\033[1;31mYour are already registers!\033[0m\n");
+                        fclose(fp);
                         return 1;
                     }
                 }
@@ -118,20 +119,17 @@ int cantidate()
                         if (strcmp(nic, cnic) == 0)
                         {
                             printf("\033[1;31mYour are already registers!\033[0m\n");
+                            fclose(fp1);
                             return 1;
                         }
                     }
-
-                    printf("Enter Your Own Vote Number:\n");
-                    scanf("%d", &num);
-
                     do
                     {
                         int taken = 0;
                         printf("Enter Your Own Vote Number:\n");
                         scanf("%s", num);
 
-                        rewind(fp);
+                        rewind(fp1);
                         while (fgets(line, sizeof(line), fp1))
                         {
                             sscanf(line, "%[^,],%[^,],%[^,],%[^\n]", cname, cnic, cnum, cpass);
@@ -175,27 +173,23 @@ int cantidate()
                         }
 
                     } while (strlen(nic) != 12);
-
                     while (fgets(line, sizeof(line), fp2))
                     {
                         sscanf(line, "%[^,],%[^,],%[^,%[^\n]", cname, cnic, cnum, cpass);
                         if (strcmp(nic, cnic) == 0)
                         {
                             printf("\033[1;31mYour are already registers!\033[0m\n");
+                            fclose(fp2);
                             return 1;
                         }
                     }
-
-                    printf("Enter Your Own Vote Number:\n");
-                    scanf("%d", &num);
-
                     do
                     {
                         int taken = 0;
                         printf("Enter Your Own Vote Number:\n");
                         scanf("%s", num);
 
-                        rewind(fp);
+                        rewind(fp2);
                         while (fgets(line, sizeof(line), fp2))
                         {
                             sscanf(line, "%[^,],%[^,],%[^,],%[^\n]", cname, cnic, cnum, cpass);
