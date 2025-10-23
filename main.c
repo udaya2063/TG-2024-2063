@@ -42,13 +42,11 @@ int main()
             scanf("%s", temp2);
             continue;
             
-    /*                    case 4:
-                         View Result();
-                        break;
+            case 4:
+             View Result();
+            break;
 
-                        case 5:
-                        break;
-                    */
+                    
         default:
             break;
         }
