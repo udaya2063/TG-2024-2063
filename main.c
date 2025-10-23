@@ -42,9 +42,9 @@ int main()
             scanf("%s", temp2);
             continue;
             
-            case 4:
+            /*case 4:
              View Result();
-            break;
+            break;*/
 
                     
         default:
