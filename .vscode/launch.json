@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Nipun/Documents/New folder/TG-2024-2063",
-      "program": "c:/Users/Nipun/Documents/New folder/TG-2024-2063/build/Debug/outDebug",
+      "cwd": "c:/Users/Nipun/Downloads/TG-2024-2063-main (1)/TG-2024-2063-main",
+      "program": "c:/Users/Nipun/Downloads/TG-2024-2063-main (1)/TG-2024-2063-main/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

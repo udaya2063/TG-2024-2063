@@ -1,11 +1,1 @@
-ertyu,-603981664,12,sdfgthnhj
-jfhfnnn,-603981664,23,dmmfkkr
-ghjkl,222297168,21,asdfghjk
-fgft,12320872,21,fdrgfhgth
-d,0,2,efr
-nghtyu,yj,12,dfrtghguyj
-w,2345,2,er
-nhgty,12345678,21,hjklhgf
-pasidu,1234,11,90
-udaya,200405900923,25,12
-kamal,123456789123,8,nbvcxz
+kamal,123456789012,15,123456

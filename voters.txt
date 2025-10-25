@@ -1,4 +1,0 @@
-niuy,12345678,qwerty
-njku,123456789,asdfghj
-g,1234,g
-
