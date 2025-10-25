@@ -14,10 +14,16 @@ int cantidate()
     FILE *fp = fopen("NPP.txt", "a+");
     FILE *fp1 = fopen("UNP.txt", "a+");
     FILE *fp2 = fopen("UDP.txt", "a+");
-
+    FILE *fp3 = fopen("NPP_votes.txt", "a");
+    FILE *fp4 = fopen("UNP_votes.txt", "a");
+    FILE *fp5 = fopen("UDP_votes.txt", "a");
+    if (fp == NULL || fp1 == NULL || fp2 == NULL || fp3 == NULL || fp4 == NULL || fp5 == NULL)
+    {
+        printf("File Missing Please Check It");
+    }
     printf("Enter You Age:\n");
     scanf("%d", &age);
-    if (age >= 18)
+    if (age >= 25)
     {
         printf("Are You Sri Lnaken ? (\033[1;33m y \033[0m/\033[1;34m n \033[0m):");
         scanf(" %c", &choice);
@@ -58,7 +64,6 @@ int cantidate()
                     if (strcmp(nic, cnic) == 0)
                     {
                         printf("\033[1;31mYour are already registers!\033[0m\n");
-                        fclose(fp);
                         return 1;
                     }
                 }
@@ -90,7 +95,10 @@ int cantidate()
                     scanf("%s", pass);
 
                     fprintf(fp, "%s,%s,%s,%s\n", name, nic, num, pass);
+                    fprintf(fp3, "%s,%s,%d\n", name, num, 0);
+                    fclose(fp3);
                     fclose(fp);
+                    printf("\033[1;31mYour are successfully registered!\033[0m\n");
 
                     break;
 
@@ -119,7 +127,6 @@ int cantidate()
                         if (strcmp(nic, cnic) == 0)
                         {
                             printf("\033[1;31mYour are already registers!\033[0m\n");
-                            fclose(fp1);
                             return 1;
                         }
                     }
@@ -150,7 +157,10 @@ int cantidate()
                     scanf("%s", pass);
 
                     fprintf(fp1, "%s,%s,%s,%s\n", name, nic, num, pass);
+                     fprintf(fp4, "%s,%s,%d\n", name, num, 0);
+                    fclose(fp4);
                     fclose(fp1);
+                    printf("\033[1;31mYour are successfully registered!\033[0m\n");
 
                     break;
 
@@ -173,13 +183,13 @@ int cantidate()
                         }
 
                     } while (strlen(nic) != 12);
+
                     while (fgets(line, sizeof(line), fp2))
                     {
                         sscanf(line, "%[^,],%[^,],%[^,%[^\n]", cname, cnic, cnum, cpass);
                         if (strcmp(nic, cnic) == 0)
                         {
                             printf("\033[1;31mYour are already registers!\033[0m\n");
-                            fclose(fp2);
                             return 1;
                         }
                     }
@@ -208,9 +218,13 @@ int cantidate()
 
                     printf("Enter Strong password:\n");
                     scanf("%s", pass);
+
                     fprintf(fp2, "%s,%s,%s,%s\n", name, nic, num, pass);
+                     fprintf(fp5, "%s,%s,%d\n", name, num, 0);
+                    fclose(fp5);
                     fclose(fp2);
-                    printf("You are successfully registered!\n");
+                    printf("\033[1;31mYour are successfully registered!\033[0m\n");
+
                     break;
 
                 default:
