@@ -45,6 +45,7 @@ int voter()
         scanf("%s", pass);
         fprintf(fp, "%s,%s,%s\n", name, NIC, pass);
         fclose(fp);
+        printf("\033[1;32mYou Are Successfully Registered!\033[0m\n");
     }
     else
     {

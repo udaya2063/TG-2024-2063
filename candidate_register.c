@@ -14,7 +14,13 @@ int cantidate()
     FILE *fp = fopen("NPP.txt", "a+");
     FILE *fp1 = fopen("UNP.txt", "a+");
     FILE *fp2 = fopen("UDP.txt", "a+");
-
+    FILE *fp3 = fopen("NPP_votes.txt", "a");
+    FILE *fp4 = fopen("UNP_votes.txt", "a");
+    FILE *fp5 = fopen("UDP_votes.txt", "a");
+    if (fp == NULL || fp1 == NULL || fp2 == NULL || fp3 == NULL || fp4 == NULL || fp5 == NULL)
+    {
+        printf("File Missing Please Check It");
+    }
     printf("Enter You Age:\n");
     scanf("%d", &age);
     if (age >= 25)
@@ -89,7 +95,10 @@ int cantidate()
                     scanf("%s", pass);
 
                     fprintf(fp, "%s,%s,%s,%s\n", name, nic, num, pass);
+                    fprintf(fp3, "%s,%s,%d\n", name, num, 0);
+                    fclose(fp3);
                     fclose(fp);
+                    printf("\033[1;31mYour are successfully registered!\033[0m\n");
 
                     break;
 
@@ -121,17 +130,13 @@ int cantidate()
                             return 1;
                         }
                     }
-
-                    printf("Enter Your Own Vote Number:\n");
-                    scanf("%d", &num);
-
                     do
                     {
                         int taken = 0;
                         printf("Enter Your Own Vote Number:\n");
                         scanf("%s", num);
 
-                        rewind(fp);
+                        rewind(fp1);
                         while (fgets(line, sizeof(line), fp1))
                         {
                             sscanf(line, "%[^,],%[^,],%[^,],%[^\n]", cname, cnic, cnum, cpass);
@@ -152,7 +157,10 @@ int cantidate()
                     scanf("%s", pass);
 
                     fprintf(fp1, "%s,%s,%s,%s\n", name, nic, num, pass);
+                     fprintf(fp4, "%s,%s,%d\n", name, num, 0);
+                    fclose(fp4);
                     fclose(fp1);
+                    printf("\033[1;31mYour are successfully registered!\033[0m\n");
 
                     break;
 
@@ -185,17 +193,13 @@ int cantidate()
                             return 1;
                         }
                     }
-
-                    printf("Enter Your Own Vote Number:\n");
-                    scanf("%d", &num);
-
                     do
                     {
                         int taken = 0;
                         printf("Enter Your Own Vote Number:\n");
                         scanf("%s", num);
 
-                        rewind(fp);
+                        rewind(fp2);
                         while (fgets(line, sizeof(line), fp2))
                         {
                             sscanf(line, "%[^,],%[^,],%[^,],%[^\n]", cname, cnic, cnum, cpass);
@@ -216,7 +220,10 @@ int cantidate()
                     scanf("%s", pass);
 
                     fprintf(fp2, "%s,%s,%s,%s\n", name, nic, num, pass);
+                     fprintf(fp5, "%s,%s,%d\n", name, num, 0);
+                    fclose(fp5);
                     fclose(fp2);
+                    printf("\033[1;31mYour are successfully registered!\033[0m\n");
 
                     break;
 

@@ -1,5 +1,1 @@
-pasidu,1,7
-pasidu,11,4
-d,2,1
-ghjkl,21,2
-udaya,25,1
+kamal,15,3
